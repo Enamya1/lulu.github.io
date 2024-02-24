@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reasons Why I Love Lulu&#128151</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  font-size: xx-large;
+}
+
+#reason {
+  margin-bottom: 20px;
+}
+
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  background: rgb(0,140,255);
+  box-shadow: 0 0 25px rgb(0,140,255);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Reasons Why I Love Lulu &#128151</h1>
+
+  <p id="reason"></p>
+
+  <button class="shadow__btn" onclick="generateReason()">Next</button>
+</div>
+
+<script>
+var reasonsWhyILoveLulu = [
+  "Her kindness brightens my day.",
+  "Lulu has a beautiful smile that lights up the room.",
+  "She supports me in everything I do.",
+  "Her intelligence impresses me every day.",
+  "Lulu makes me laugh like no one else can.",
+  "She challenges me to be a better person.",
+  "Her passion for life is contagious.",
+  "Lulu understands me like nobody else.",
+  "She makes even the simplest moments special.",
+  "Her love is my source of strength and happiness.",
+  "She has a unique way of seeing the world.",
+  "Lulu accepts me for who I am, flaws and all.",
+  "She inspires me to chase my dreams.",
+  "Her warmth makes me feel at home.",
+  "She's my partner in crime and in love.",
+  "She brings out the best in me.",
+  "Her presence alone makes life more beautiful.",
+  "She's my rock in times of trouble.",
+  "She fills my life with love and joy.",
+  "Lulu is simply irreplaceable."
+];
+
+function generateReason() {
+  var randomNumber = Math.floor(Math.random() * reasonsWhyILoveLulu.length);
+  var reason = reasonsWhyILoveLulu[randomNumber];
+  document.getElementById("reason").innerHTML = reason;
+}
+</script>
+
+</body>
+</html>
